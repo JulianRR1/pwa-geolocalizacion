@@ -10,9 +10,4 @@ self.addEventListener("activate", (event) => {
   return self.clients.claim();
 });
 
-navigator.serviceWorker.register("./sw.js")
-  .then((reg) => console.log("Service Worker registrado:", reg.scope))
-  .catch((err) => console.error("Error al registrar SW:", err));
-
-
 // En esta práctica no interceptamos fetch.
